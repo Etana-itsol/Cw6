@@ -1,0 +1,10 @@
+Path: /api/enrollments 
+QueryString: 
+Method: POST 
+Body Parameters: {
+    "IndexNumber": "s8004",
+    "Studies": "IT",
+    "FirstName":"Lech",
+    "LastName":"Mechowski",
+    "BirthDate":"2019-01-06T17:16:40"
+}
