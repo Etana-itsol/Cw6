@@ -114,7 +114,7 @@ namespace Cw5.Services
             using (SqlCommand com = new SqlCommand())
             {
                 com.Connection = con;
-                com.CommandText = "SELECT Name, Semester, startdate FROM Student S INNER JOIN Enrollment E on S.IdEnrollment = E.IdEnrollment INNER JOIN Studies St on E.IdStudy = St.IdStudy WHERE IndexNumber =@index";
+                com.CommandText = "SELECT IndexNumber,FirstName,LastName,BirthDate,Name,Semester FROM Student S JOIN Enrollment E on S.IdEnrollment = E.IdEnrollment JOIN Studies St on E.IdStudy = St.IdStudy WHERE IndexNumber = @index";
                 com.Parameters.AddWithValue("index", id);
 
                 con.Open();
